@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.owl.test.jdbc.IMemberService">
+
+	<select id="selectAll"
+		parameterType="com.owl.test.dto.MemberDTO"
+		resultType="com.owl.test.dto.MemberDTO">
+		SELECT id
+		     , member_id as memberId
+		     , created_at as createdAt
+		  FROM member
+		 ORDER BY created_at DESC
+	</select>
+
+</mapper>
